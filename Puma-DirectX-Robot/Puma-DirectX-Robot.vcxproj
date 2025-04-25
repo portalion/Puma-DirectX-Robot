@@ -168,7 +168,6 @@
     <ClInclude Include="src\dinput\keyboard.h" />
     <ClInclude Include="src\dinput\mouse.h" />
     <ClInclude Include="src\environmentMapper.h" />
-    <ClInclude Include="src\mesh.h" />
     <ClInclude Include="src\utils\compressed_pair.h" />
     <ClInclude Include="src\utils\exceptions.h" />
     <ClInclude Include="src\utils\ptr_vector.h" />
