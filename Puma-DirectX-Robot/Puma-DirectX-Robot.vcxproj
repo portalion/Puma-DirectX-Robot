@@ -135,11 +135,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\d3dx\camera.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\utils\exceptions.cpp" />
+    <ClCompile Include="src\winapi\window.cpp" />
+    <ClCompile Include="src\winapi\windowApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\d3dx\camera.h" />
+    <ClInclude Include="src\utils\compressed_pair.h" />
+    <ClInclude Include="src\utils\exceptions.h" />
+    <ClInclude Include="src\utils\ptr_vector.h" />
+    <ClInclude Include="src\winapi\clock.h" />
+    <ClInclude Include="src\winapi\window.h" />
+    <ClInclude Include="src\winapi\windowApplication.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
