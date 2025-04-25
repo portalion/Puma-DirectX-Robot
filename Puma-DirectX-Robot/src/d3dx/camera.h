@@ -16,8 +16,8 @@ public:
 		float minDistance = 0.0f, float maxDistance = FLT_MAX, float distance = 0.0f);
 	explicit Camera(float minDistance, float maxDistance = FLT_MAX, float distance = 0.0f);
 
-	DirectX::XMMATRIX GetViewMatrix() const;
-	DirectX::XMFLOAT4 GetCameraPosition() const;
+	DirectX::XMMATRIX getViewMatrix() const;
+	DirectX::XMFLOAT4 getCameraPosition() const;
 
 	inline void MoveTarget(DirectX::XMFLOAT3 v) { MoveTarget(XMLoadFloat3(&v)); }
 	void MoveTarget(DirectX::FXMVECTOR v);
@@ -25,11 +25,11 @@ public:
 	void Zoom(float dd);
 	void SetDistanceRange(float minDistance, float maxDistance);
 
-	inline float GetXAngle() const { return m_angleX; }
-	inline float GetYAngle() const { return m_angleY; }
-	inline float GetDistance() const { return m_distance; }
-	inline DirectX::XMFLOAT4 GetTarget() const { return m_target; }
+	inline float getXAngle() const { return m_angleX; }
+	inline float getYAngle() const { return m_angleY; }
+	inline float getDistance() const { return m_distance; }
+	inline DirectX::XMFLOAT4 getTarget() const { return m_target; }
 
-	DirectX::XMVECTOR GetForwardDir() const;
-	DirectX::XMVECTOR GetRightDir() const;
+	DirectX::XMVECTOR getForwardDir() const;
+	DirectX::XMVECTOR getRightDir() const;
 };

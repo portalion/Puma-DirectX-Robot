@@ -1,4 +1,4 @@
-#include "Camera.h"
+#include "camera.h"
 
 using namespace DirectX;
 
@@ -13,17 +13,17 @@ Camera::Camera(float minDistance, float maxDistance, float distance)
 {
 }
 
-DirectX::XMMATRIX Camera::GetViewMatrix() const
+DirectX::XMMATRIX Camera::getViewMatrix() const
 {
     return XMMatrixTranslation(-m_target.x, -m_target.y, -m_target.z) * XMMatrixRotationY(-m_angleY) *
         XMMatrixRotationX(-m_angleX) * XMMatrixTranslation(0, 0, m_distance);
 }
 
-DirectX::XMFLOAT4 Camera::GetCameraPosition() const
+DirectX::XMFLOAT4 Camera::getCameraPosition() const
 {
     if (m_distance == 0.0f)
         return m_target;
-    XMMATRIX viewMtx = GetViewMatrix();
+    XMMATRIX viewMtx = getViewMatrix();
     XMVECTOR det;
     viewMtx = XMMatrixInverse(&det, viewMtx);
     XMFLOAT3 result(0.0f, 0.0f, 0.0f);
@@ -60,16 +60,16 @@ void Camera::SetDistanceRange(float minDistance, float maxDistance)
     ClampDistance();
 }
 
-DirectX::XMVECTOR Camera::GetForwardDir() const
+DirectX::XMVECTOR Camera::getForwardDir() const
 {
     auto forward = XMVectorSet(0, 0, 1, 0);
-    return XMVector3TransformNormal(forward, XMMatrixRotationY(GetYAngle()));
+    return XMVector3TransformNormal(forward, XMMatrixRotationY(getYAngle()));
 }
 
-DirectX::XMVECTOR Camera::GetRightDir() const
+DirectX::XMVECTOR Camera::getRightDir() const
 {
     auto right = XMVectorSet(1, 0, 0, 0);
-    return XMVector3TransformNormal(right, XMMatrixRotationY(GetYAngle()));
+    return XMVector3TransformNormal(right, XMMatrixRotationY(getYAngle()));
 }
 
 void Camera::ClampDistance()
