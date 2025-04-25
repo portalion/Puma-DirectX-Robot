@@ -62,5 +62,10 @@ public:
 		: DeviceBase(std::move(device))
 	{ }
 
+	Keyboard(const Keyboard& other) = delete;
 	Keyboard& operator=(const Keyboard& other) = delete;
+
+	Keyboard(Keyboard&& other) noexcept = default;
+	Keyboard& operator=(Keyboard&& other) noexcept = default;
 };
+

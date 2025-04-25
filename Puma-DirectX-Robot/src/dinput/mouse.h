@@ -67,5 +67,10 @@ public:
 		: DeviceBase(std::move(device))
 	{ }
 
+	Mouse(const Mouse& other) = delete;
 	Mouse& operator=(const Mouse& other) = delete;
+
+	Mouse(Mouse&& other) noexcept = default;
+	Mouse& operator=(Mouse&& other) noexcept = default;
 };
+
