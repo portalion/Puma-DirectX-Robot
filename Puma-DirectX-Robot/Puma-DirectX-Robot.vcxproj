@@ -136,6 +136,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\d3dx\camera.cpp" />
+    <ClCompile Include="src\dinput\diDeviceBase.cpp" />
+    <ClCompile Include="src\dinput\diInstance.cpp" />
+    <ClCompile Include="src\dinput\keyboard.cpp" />
+    <ClCompile Include="src\dinput\mouse.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\utils\exceptions.cpp" />
     <ClCompile Include="src\winapi\window.cpp" />
@@ -143,6 +147,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\d3dx\camera.h" />
+    <ClInclude Include="src\dinput\diDeviceBase.h" />
+    <ClInclude Include="src\dinput\diInstance.h" />
+    <ClInclude Include="src\dinput\diptr.h" />
+    <ClInclude Include="src\dinput\keyboard.h" />
+    <ClInclude Include="src\dinput\mouse.h" />
     <ClInclude Include="src\utils\compressed_pair.h" />
     <ClInclude Include="src\utils\exceptions.h" />
     <ClInclude Include="src\utils\ptr_vector.h" />
