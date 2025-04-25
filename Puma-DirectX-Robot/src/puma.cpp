@@ -69,27 +69,27 @@ Puma::Puma(HINSTANCE appInstance)
 
 	//Textures
 
-	auto vsCode = m_device.LoadByteCode(L"out/phongVS.cso");
-	auto psCode = m_device.LoadByteCode(L"out/phongPS.cso");
+	auto vsCode = m_device.LoadByteCode(L"phongVS.cso");
+	auto psCode = m_device.LoadByteCode(L"phongPS.cso");
 	m_phongVS = m_device.CreateVertexShader(vsCode);
 	m_phongPS = m_device.CreatePixelShader(psCode);
 	m_inputlayout = m_device.CreateInputLayout(VertexPositionNormal::Layout, vsCode);
 
-	vsCode = m_device.LoadByteCode(L"out/texturedVS.cso");
-	psCode = m_device.LoadByteCode(L"out/texturedPS.cso");
+	vsCode = m_device.LoadByteCode(L"texturedVS.cso");
+	psCode = m_device.LoadByteCode(L"texturedPS.cso");
 	m_textureVS = m_device.CreateVertexShader(vsCode);
 	m_texturePS = m_device.CreatePixelShader(psCode);
-	psCode = m_device.LoadByteCode(L"out/colorTexPS.cso");
+	psCode = m_device.LoadByteCode(L"colorTexPS.cso");
 	m_colorTexPS = m_device.CreatePixelShader(psCode);
 
-	vsCode = m_device.LoadByteCode(L"out/multiTexVS.cso");
-	psCode = m_device.LoadByteCode(L"out/multiTexPS.cso");
+	vsCode = m_device.LoadByteCode(L"multiTexVS.cso");
+	psCode = m_device.LoadByteCode(L"multiTexPS.cso");
 	m_multiTexVS = m_device.CreateVertexShader(vsCode);
 	m_multiTexPS = m_device.CreatePixelShader(psCode);
 
-	vsCode = m_device.LoadByteCode(L"out/particleVS.cso");
-	psCode = m_device.LoadByteCode(L"out/particlePS.cso");
-	auto gsCode = m_device.LoadByteCode(L"out/particleGS.cso");
+	vsCode = m_device.LoadByteCode(L"particleVS.cso");
+	psCode = m_device.LoadByteCode(L"particlePS.cso");
+	auto gsCode = m_device.LoadByteCode(L"particleGS.cso");
 	m_particleVS = m_device.CreateVertexShader(vsCode);
 	m_particlePS = m_device.CreatePixelShader(psCode);
 	m_particleGS = m_device.CreateGeometryShader(gsCode);

@@ -116,7 +116,7 @@
       <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(OutDir)*.cso" "$(ProjectDir)src\out"</Command>
+      <Command>copy "$(OutDir)*.cso" "$(ProjectDir)out\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -137,7 +137,7 @@
       <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;dxguid.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(OutDir)*.cso" "$(ProjectDir)src\out"</Command>
+      <Command>copy "$(OutDir)*.cso" "$(ProjectDir)out\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
