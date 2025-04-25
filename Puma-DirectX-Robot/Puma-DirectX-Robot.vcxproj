@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\d3dx\camera.cpp" />
     <ClCompile Include="src\d3dx\DDSTextureLoader.cpp" />
     <ClCompile Include="src\d3dx\dxApplication.cpp" />
@@ -174,6 +175,9 @@
     <ClInclude Include="src\winapi\clock.h" />
     <ClInclude Include="src\winapi\window.h" />
     <ClInclude Include="src\winapi\windowApplication.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Mesh.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
