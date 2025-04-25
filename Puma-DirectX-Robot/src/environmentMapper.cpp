@@ -35,9 +35,9 @@ EnvironmentMapper::EnvironmentMapper(const DxDevice& device, float nearPlane, fl
 	m_envView = device.CreateShaderResourceView(m_envTexture);
 
 	//Shaders
-	auto vsCode = device.LoadByteCode(L"envMapVS.cso");
+	auto vsCode = device.LoadByteCode(L"out/envMapVS.cso");
 	m_envVS = device.CreateVertexShader(vsCode);
-	auto psCode = device.LoadByteCode(L"envMapPS.cso");
+	auto psCode = device.LoadByteCode(L"out/envMapPS.cso");
 	m_envPS = device.CreatePixelShader(psCode);
 }
 

@@ -18,12 +18,21 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Mesh.cpp">
+    <ClCompile Include="src\model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\puma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\particleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Mesh.h">
+    <ClInclude Include="src\model.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClCompile Include="src\d3dx\camera.cpp">
@@ -71,6 +80,15 @@
     <ClCompile Include="src\environmentMapper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClInclude Include="src\puma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\particleSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\d3dx\camera.h">
@@ -133,5 +151,19 @@
     <ClInclude Include="src\environmentMapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="resources\shaders\colorTexPS.hlsl" />
+    <FxCompile Include="resources\shaders\envMapPS.hlsl" />
+    <FxCompile Include="resources\shaders\envMapVS.hlsl" />
+    <FxCompile Include="resources\shaders\multiTexPS.hlsl" />
+    <FxCompile Include="resources\shaders\multiTexVS.hlsl" />
+    <FxCompile Include="resources\shaders\particleGS.hlsl" />
+    <FxCompile Include="resources\shaders\particlePS.hlsl" />
+    <FxCompile Include="resources\shaders\particleVS.hlsl" />
+    <FxCompile Include="resources\shaders\phongPS.hlsl" />
+    <FxCompile Include="resources\shaders\phongVS.hlsl" />
+    <FxCompile Include="resources\shaders\texturedPS.hlsl" />
+    <FxCompile Include="resources\shaders\texturedVS.hlsl" />
   </ItemGroup>
 </Project>
